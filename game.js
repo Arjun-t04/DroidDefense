@@ -254,7 +254,7 @@ function createBot() {
       y: 0,
       width: 50, 
       height: 50, 
-      speed: 5, 
+      speed: 0.5, 
       image: new Image() 
     };
     bot.image.src = 'Enemy.png'; 
