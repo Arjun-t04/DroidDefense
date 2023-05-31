@@ -132,6 +132,7 @@ function update(){
         if (bot.y + bot.height > canvas.height) {
           bots.splice(i, 1);
           i--;
+          score-=5;
         }
       }
       if (homeHealth>8){
@@ -274,7 +275,10 @@ function createBot() {
           bots.splice(j, 1);
           j--;
           score+=5;
-          context.drawImage(blast, bot.x, bot.y, bot.width, bot.height);
+          showBlast(bot.x, bot.y, bot.width, bot.height); 
+          setTimeout(() => {
+            removeBlast();
+          }, 1000);
         }
       }
     }
@@ -294,7 +298,7 @@ function createBot() {
         i--;
         score-=10;
         homeHealth--;
-        context.drawImage(blast, bot.x, bot.y, bot.width, bot.height);
+        showBlast(bot.x, bot.y, bot.width, bot.height); 
       }
     }
   }
@@ -311,7 +315,7 @@ function createBot() {
         i--;
         score-=10;
         playerHealth--;
-        context.drawImage(blast, bot.x, bot.y, bot.width, bot.height);
+        showBlast(bot.x, bot.y, bot.width, bot.height); 
       }
     }
   }
@@ -322,6 +326,13 @@ function createBot() {
     context.rotate(angle);
     context.drawImage(image, -(image.width/2), -(image.height/2));
     context.restore(); 
+}
+function showBlast(x, y, width, height) {
+  context.drawImage(blast, x, y, width, height);
+}
+
+function removeBlast() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
 }
 update();
 }
