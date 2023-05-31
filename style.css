@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.start {
+    position: absolute;
+    z-index: 10;
+    top:30%;
+    color:rgb(219, 65, 9);
+    visibility: visible;
+    background-image: url(start.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    font-size: 40px;
+    padding: 20px 40px;
+    padding-top: 150px;
+}
+.end {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top:30%;
+    color:rgb(219, 65, 9);
+    visibility: visible;
+    background-image: url(start.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 20px 40px;
+    padding-top: 150px;
+    visibility: hidden;
+}
+.score-tag {
+    display: flex;
+    background-color: white;
+    padding:5px 10px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-bottom:10px;
+}
+.button{
+    font-size: 30px;
+    color:rgb(219, 65, 9);
+    background-color: white;
+    border-radius: 5px;
+    border:none;
+    padding:10px 20px;
+    cursor: pointer;
+}
+.button:hover {
+    box-shadow: 0 0 20px rgba(207, 174, 25, 0.8);
+}
+.text{
+    display: flex;
+    background-color: white;
+    padding:5px 10px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-bottom:10px;
+}
+.bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: blur(5px);
+}
+#canvas {
+    background-image:url(bg.jpeg);
+    background-size: cover;
+    border-radius: 10px;
+    border: solid 10px greenyellow;
+    
+}
+.title {
+    color:rgb(0, 200, 255);
+    font-size: 1.5rem;
+}
+#bullet  {
+    display: none;
+}
